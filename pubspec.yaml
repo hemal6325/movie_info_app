@@ -1,0 +1,74 @@
+name: movie_info_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.5.0+13
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- UI & Icons ---
+  cupertino_icons: ^1.0.2
+  # স্লাইডারের জন্য
+  carousel_slider: ^5.1.1
+  # ছবি লোড করার জন্য
+  cached_network_image: ^3.3.0
+  # তারিখ ফরম্যাট করার জন্য
+  intl: ^0.18.1
+
+  # --- State Management & Logic ---
+  provider: ^6.1.1
+  # API কল করার জন্য
+  dio: ^5.4.0
+  flutter_dotenv: ^5.1.0
+  # লোকাল স্টোরেজ (ফেভারিট সেভ রাখার জন্য)
+  shared_preferences: ^2.2.2
+  # লিংক ওপেন করার জন্য
+  url_launcher: ^6.2.2
+  # অ্যাপ ভার্সন দেখার জন্য
+  package_info_plus: ^5.0.1
+  # ছবি তোলার জন্য (প্রোফাইল পিকচার)
+  image_picker: ^1.0.7
+  
+  # --- Firebase & Google Auth ---
+  # ফায়ারবেস কোর
+  firebase_core: ^2.25.4
+  # ইমেইল লগইন
+  firebase_auth: ^4.17.4
+  # ডাটাবেস
+  cloud_firestore: ^4.15.4
+  # স্টোরেজ (ছবির জন্য)
+  firebase_storage: ^11.6.5
+  
+  # 🔥 Google Login (এই ভার্সনটি স্টেবল)
+  google_sign_in: ^6.2.1
+  introduction_screen: ^3.1.17
+  youtube_player_iframe: ^5.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  
+  # অ্যাপ আইকন জেনারেটর
+  flutter_launcher_icons: ^0.13.1
+
+# --- Assets & Fonts ---
+flutter:
+  uses-material-design: true
+
+  # ছবি এবং এনভায়রনমেন্ট ফাইল
+  assets:
+    - .env
+    - assets/images/
+
+# অ্যাপ আইকন কনফিগারেশন
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app-logo.png"
+  min_sdk_android: 21
